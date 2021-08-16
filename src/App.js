@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Users from './components/Users/Users';
+import NewUser from './components/NewUser/NewUser';
 
 const USERS = [
   {id:1, username: "Michael", age: 29},
@@ -17,6 +18,7 @@ function App() {
   
   return (
     <div>
+      <NewUser onAddUser={addUserHandler} />
       <Users users={theUsers} />
     </div>
   );
